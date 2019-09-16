@@ -20815,3 +20815,1566 @@ INFO 2019-09-11 10:06:38,595 basehttp 124 "GET / HTTP/1.1" 200 124657
 INFO 2019-09-11 10:06:38,936 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
 INFO 2019-09-11 10:06:40,361 basehttp 124 "GET / HTTP/1.1" 200 124657
 INFO 2019-09-11 10:06:40,695 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+ERROR 2019-09-11 12:47:26,393 exception 135 Internal Server Error: /meiduo_admin/authorizations/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/views/users.py", line 15, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 229, in is_valid
+    'Cannot call `.is_valid()` as no `data=` keyword argument was '
+AssertionError: Cannot call `.is_valid()` as no `data=` keyword argument was passed when instantiating the serializer instance.
+ERROR 2019-09-11 12:47:26,767 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 500 20372
+ERROR 2019-09-11 12:48:05,655 exception 135 Internal Server Error: /meiduo_admin/authorizations/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/views/users.py", line 15, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 430, in run_validation
+    value = self.to_internal_value(data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 483, in to_internal_value
+    for field in fields:
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 366, in _writable_fields
+    for field in self.fields.values():
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1004, in get_fields
+    serializer_class=self.__class__.__name__
+AssertionError: Class AdminAuthSerializer missing "Meta.model" attribute
+ERROR 2019-09-11 12:48:05,727 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 500 21289
+ERROR 2019-09-11 12:48:57,411 exception 135 Internal Server Error: /meiduo_admin/authorizations/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/views/users.py", line 15, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 433, in run_validation
+    value = self.validate(value)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/serializers/users.py", line 20, in validate
+    user =User.objects.get(username = username ,st_staff = True)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'st_staff' into field. Choices are: adresses, date_joined, default_address, default_address_id, email, email_active, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, mobile, oauthqquser, orders, password, user_permissions, username
+ERROR 2019-09-11 12:48:57,525 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 500 22785
+INFO 2019-09-11 12:49:35,140 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 43
+INFO 2019-09-11 12:50:55,322 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 43
+INFO 2019-09-11 12:51:13,281 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 43
+INFO 2019-09-11 12:51:55,291 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 20
+INFO 2019-09-11 13:06:27,503 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 209
+WARNING 2019-09-12 03:32:26,423 base 152 Not Found: /meiduo_admin
+WARNING 2019-09-12 03:32:26,433 basehttp 124 "GET /meiduo_admin HTTP/1.1" 404 8286
+INFO 2019-09-12 03:32:34,738 basehttp 124 "GET / HTTP/1.1" 200 124657
+INFO 2019-09-12 03:32:34,812 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:34,823 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:34,827 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:34,830 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:34,838 basehttp 124 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:34,860 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:34,863 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:34,888 basehttp 124 "GET /static/js/common.js HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:34,891 basehttp 124 "GET /static/js/index.js HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:35,243 basehttp 124 "GET /static/images/icons.png HTTP/1.1" 304 0
+INFO 2019-09-12 03:32:35,731 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 03:40:51,990 basehttp 124 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 174
+INFO 2019-09-12 03:46:46,528 basehttp 124 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 174
+INFO 2019-09-12 03:49:27,123 basehttp 124 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 0
+WARNING 2019-09-12 03:49:27,260 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 400 49
+WARNING 2019-09-12 03:50:33,670 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 400 49
+INFO 2019-09-12 03:53:11,164 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 209
+INFO 2019-09-12 03:53:11,420 basehttp 124 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2019-09-12 03:53:11,424 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+WARNING 2019-09-12 03:53:11,444 base 152 Not Found: /meiduo_admin/statistical/total_count/
+WARNING 2019-09-12 03:53:11,455 base 152 Not Found: /meiduo_admin/statistical/day_increment/
+INFO 2019-09-12 03:53:11,459 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2019-09-12 03:53:11,461 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2019-09-12 03:53:11,462 basehttp 124 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+WARNING 2019-09-12 03:53:11,463 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 404 8437
+WARNING 2019-09-12 03:53:11,463 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 404 8431
+INFO 2019-09-12 03:53:11,468 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2019-09-12 03:53:11,471 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2019-09-12 03:53:11,475 basehttp 124 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+WARNING 2019-09-12 03:53:11,512 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 03:53:11,514 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 03:53:11,525 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 03:53:11,537 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:53:11,542 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 03:53:11,543 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 8443
+WARNING 2019-09-12 03:53:11,544 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:53:11,557 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 03:53:11,575 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 03:53:11,577 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 8443
+WARNING 2019-09-12 03:53:11,579 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:53:11,579 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:57:38,042 base 152 Not Found: /meiduo_admin/statistical/total_count/
+WARNING 2019-09-12 03:57:38,055 base 152 Not Found: /meiduo_admin/statistical/day_increment/
+WARNING 2019-09-12 03:57:38,071 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 03:57:38,071 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 404 8431
+WARNING 2019-09-12 03:57:38,085 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 03:57:38,085 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 404 8437
+WARNING 2019-09-12 03:57:38,099 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 03:57:38,100 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:57:38,113 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 03:57:38,115 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:57:38,115 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 8443
+WARNING 2019-09-12 03:57:38,127 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 03:57:38,141 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 03:57:38,142 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 8443
+WARNING 2019-09-12 03:57:38,144 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:57:38,144 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:59:40,635 base 152 Not Found: /meiduo_admin/statistical/total_count/
+WARNING 2019-09-12 03:59:40,650 base 152 Not Found: /meiduo_admin/statistical/day_increment/
+WARNING 2019-09-12 03:59:40,663 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 404 8437
+WARNING 2019-09-12 03:59:40,666 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 03:59:40,666 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:59:40,685 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 404 8431
+WARNING 2019-09-12 03:59:40,687 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 03:59:40,711 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 03:59:40,718 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 03:59:40,735 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 03:59:40,748 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:59:40,749 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 03:59:40,749 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 03:59:40,750 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 8443
+WARNING 2019-09-12 03:59:40,750 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 8443
+WARNING 2019-09-12 03:59:40,752 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8428
+WARNING 2019-09-12 04:00:30,338 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 04:00:30,340 base 152 Not Found: /meiduo_admin/statistical/day_increment/
+WARNING 2019-09-12 04:00:30,341 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:00:30,354 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:00:30,354 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:00:30,358 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:00:30,362 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 8630
+WARNING 2019-09-12 04:00:30,377 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 04:00:30,396 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:00:30,380 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 404 8624
+WARNING 2019-09-12 04:00:30,384 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:00:30,397 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:00:30,398 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:00:30,380 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 8630
+ERROR 2019-09-12 04:00:30,443 exception 135 Internal Server Error: /meiduo_admin/statistical/total_count/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/views/statistical.py", line 20, in get
+    'date': timezone.now().day(),
+TypeError: 'int' object is not callable
+ERROR 2019-09-12 04:00:30,490 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 500 19050
+WARNING 2019-09-12 04:01:20,839 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:01:20,859 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:01:20,871 base 152 Not Found: /meiduo_admin/statistical/day_increment/
+WARNING 2019-09-12 04:01:20,872 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:01:20,882 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 04:01:20,883 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:01:20,883 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 8630
+WARNING 2019-09-12 04:01:20,884 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 404 8624
+WARNING 2019-09-12 04:01:20,898 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 8630
+WARNING 2019-09-12 04:01:20,900 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:01:20,901 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:01:20,907 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8615
+INFO 2019-09-12 04:01:20,922 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:01:20,935 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 04:01:20,936 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:08:09,332 base 152 Not Found: /meiduo_admin/statistical/day_increment/
+WARNING 2019-09-12 04:08:09,345 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:08:09,374 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 8630
+WARNING 2019-09-12 04:08:09,348 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:08:09,376 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 8630
+WARNING 2019-09-12 04:08:09,373 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 404 8624
+WARNING 2019-09-12 04:08:09,372 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 04:08:09,383 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:08:09,396 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:08:09,402 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 04:08:09,405 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8615
+INFO 2019-09-12 04:08:09,411 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:08:09,412 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:08:09,425 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:08:09,425 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8615
+WARNING 2019-09-12 04:09:13,100 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:09:13,116 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:09:13,125 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 04:09:13,128 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:09:13,132 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 8819
+WARNING 2019-09-12 04:09:13,135 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 8819
+WARNING 2019-09-12 04:09:13,136 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8804
+WARNING 2019-09-12 04:09:13,138 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8804
+INFO 2019-09-12 04:09:13,152 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:09:13,156 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:09:13,168 base 152 Not Found: /meiduo_admin/statistical/day_active/
+WARNING 2019-09-12 04:09:13,169 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 404 8804
+WARNING 2019-09-12 04:09:13,184 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:09:13,185 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8804
+WARNING 2019-09-12 04:14:32,249 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:14:32,254 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:14:32,270 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:14:32,273 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+WARNING 2019-09-12 04:14:32,290 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:14:32,291 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:14:32,295 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:14:32,295 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+INFO 2019-09-12 04:14:32,308 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:14:32,317 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:14:32,318 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:14:32,336 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:14:50,690 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 209
+WARNING 2019-09-12 04:14:50,780 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:14:50,784 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:14:50,797 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:14:50,801 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:14:50,801 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+WARNING 2019-09-12 04:14:50,811 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:14:50,817 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:14:50,825 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+INFO 2019-09-12 04:14:50,834 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:14:50,839 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:14:50,846 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:14:50,863 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:15:15,756 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:15:15,768 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+WARNING 2019-09-12 04:15:15,777 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:15:15,792 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:15:15,814 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:15:15,816 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:15:15,816 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:15:15,821 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+INFO 2019-09-12 04:15:15,832 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:15:15,833 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:15:15,839 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:15:15,848 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:15:45,950 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:15:46,110 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:15:46,004 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:15:46,112 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:15:46,136 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:15:46,147 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+INFO 2019-09-12 04:15:46,255 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:15:46,399 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:15:46,488 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:15:46,495 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+INFO 2019-09-12 04:15:50,986 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:15:52,924 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:20:08,813 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:20:08,814 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:20:08,796 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:20:08,864 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+WARNING 2019-09-12 04:20:08,882 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:20:08,884 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:20:08,962 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:20:08,976 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+INFO 2019-09-12 04:20:09,042 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:20:09,072 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:20:12,036 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:20:12,098 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:20:27,234 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 209
+WARNING 2019-09-12 04:20:27,494 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:20:27,503 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:20:27,524 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:20:27,526 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:20:27,531 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:20:27,536 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+WARNING 2019-09-12 04:20:27,600 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:20:27,613 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+INFO 2019-09-12 04:20:27,642 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:20:27,647 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:20:27,658 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:20:27,695 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:20:39,546 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:20:39,559 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:20:39,595 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:20:39,597 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+WARNING 2019-09-12 04:20:39,606 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9005
+INFO 2019-09-12 04:20:39,619 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:20:39,627 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:20:39,670 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:20:39,731 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+INFO 2019-09-12 04:20:39,742 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:20:39,770 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+INFO 2019-09-12 04:20:39,820 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:21:54,047 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 209
+INFO 2019-09-12 04:21:54,265 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:21:54,268 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:21:54,281 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:21:54,357 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:21:54,394 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+WARNING 2019-09-12 04:21:54,422 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:21:54,473 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:21:54,480 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:21:54,482 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9005
+WARNING 2019-09-12 04:21:54,591 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:21:54,594 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 8990
+INFO 2019-09-12 04:21:54,595 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:30:12,431 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 04:30:12,413 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 04:30:12,504 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9191
+WARNING 2019-09-12 04:30:12,531 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9191
+WARNING 2019-09-12 04:30:12,416 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+INFO 2019-09-12 04:30:12,550 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:30:12,559 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 9176
+INFO 2019-09-12 04:30:12,676 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:30:12,751 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:30:12,775 base 152 Not Found: /meiduo_admin/statistical/day_orders/
+WARNING 2019-09-12 04:30:12,787 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 404 9176
+INFO 2019-09-12 04:30:12,840 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:31:07,455 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+INFO 2019-09-12 04:31:07,582 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:31:07,447 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+INFO 2019-09-12 04:31:07,598 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+WARNING 2019-09-12 04:31:07,613 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9191
+WARNING 2019-09-12 04:31:07,646 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9191
+INFO 2019-09-12 04:31:07,713 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:31:07,718 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:31:07,731 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 04:31:07,815 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:45:25,567 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+INFO 2019-09-12 08:45:25,604 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2019-09-12 08:45:25,638 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2019-09-12 08:45:25,645 basehttp 124 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2019-09-12 08:45:25,647 basehttp 124 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+INFO 2019-09-12 08:45:25,678 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2019-09-12 08:45:25,709 basehttp 124 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+INFO 2019-09-12 08:45:25,711 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+WARNING 2019-09-12 08:45:26,103 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 08:45:26,129 base 152 Not Found: /meiduo_admin/statistical/month_increment/
+WARNING 2019-09-12 08:45:26,171 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9191
+WARNING 2019-09-12 08:45:26,180 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 404 9191
+INFO 2019-09-12 08:45:26,235 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:45:26,278 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:45:26,292 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:45:26,332 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:45:26,409 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:45:26,455 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+WARNING 2019-09-12 08:46:27,015 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 08:46:27,099 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-12 08:46:27,227 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:46:27,239 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:46:27,269 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:46:27,379 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:46:27,409 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:46:27,492 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:46:27,749 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 958
+INFO 2019-09-12 08:48:04,463 basehttp 124 "GET /login/ HTTP/1.1" 200 3605
+INFO 2019-09-12 08:48:04,531 basehttp 124 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,537 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,547 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,550 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,560 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,570 basehttp 124 "GET /static/js/common.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,575 basehttp 124 "GET /static/images/logo02.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,620 basehttp 124 "GET /static/js/login.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,636 basehttp 124 "GET /static/images/login_banner.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,638 basehttp 124 "GET /static/images/QQ-weixin.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:04,641 basehttp 124 "GET /static/images/icons02.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:13,983 basehttp 124 "POST /login/ HTTP/1.1" 302 0
+INFO 2019-09-12 08:48:15,572 basehttp 124 "GET / HTTP/1.1" 200 124657
+INFO 2019-09-12 08:48:15,618 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:15,637 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:15,642 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:15,654 basehttp 124 "GET /static/js/index.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:15,881 basehttp 124 "GET /static/images/icons.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:16,348 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:48:20,256 basehttp 124 "GET /list/115/1/ HTTP/1.1" 200 102084
+INFO 2019-09-12 08:48:20,305 basehttp 124 "GET /static/js/jquery.pagination.min.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:20,308 basehttp 124 "GET /static/js/list.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:20,311 basehttp 124 "GET /static/css/jquery.pagination.css HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:20,356 basehttp 124 "GET /static/images/shop_cart.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:20,581 basehttp 124 "GET /hot/115/ HTTP/1.1" 200 588
+INFO 2019-09-12 08:48:20,584 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:48:22,642 basehttp 124 "GET /detail/14/ HTTP/1.1" 200 105376
+INFO 2019-09-12 08:48:22,677 basehttp 124 "GET /static/images/goods/goods001.jpg HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:22,704 basehttp 124 "GET /static/images/goods/goods002.jpg HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:22,725 basehttp 124 "GET /static/images/selected.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:22,727 basehttp 124 "GET /static/js/detail.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:23,004 basehttp 124 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:48:23,008 basehttp 124 "GET /hot/115/ HTTP/1.1" 200 588
+INFO 2019-09-12 08:48:23,031 basehttp 124 "GET /comment/14/ HTTP/1.1" 200 55
+INFO 2019-09-12 08:48:23,044 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:48:23,049 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:48:25,202 basehttp 124 "POST /carts/ HTTP/1.1" 200 29
+WARNING 2019-09-12 08:48:28,424 basehttp 124 "GET /static/cart.html HTTP/1.1" 404 1646
+INFO 2019-09-12 08:48:30,440 basehttp 124 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:48:30,448 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:48:31,507 basehttp 124 "GET /carts/ HTTP/1.1" 200 4623
+INFO 2019-09-12 08:48:31,531 basehttp 124 "GET /static/js/cart.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:34,833 basehttp 124 "GET /carts/ HTTP/1.1" 200 4623
+INFO 2019-09-12 08:48:36,342 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 5606
+INFO 2019-09-12 08:48:36,383 basehttp 124 "GET /static/images/pay_icons.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:36,386 basehttp 124 "GET /static/js/place_order.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:38,764 basehttp 124 "POST /orders/commit/ HTTP/1.1" 200 68
+INFO 2019-09-12 08:48:38,821 basehttp 124 "GET /orders/success/?order_id=20190912084838000000001&payment_amount=3798&pay_method=2 HTTP/1.1" 200 3554
+INFO 2019-09-12 08:48:38,843 basehttp 124 "GET /static/js/order_success.js HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:38,865 basehttp 124 "GET /static/images/success.png HTTP/1.1" 304 0
+INFO 2019-09-12 08:48:45,312 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:48:45,382 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+WARNING 2019-09-12 08:48:45,432 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+INFO 2019-09-12 08:48:45,433 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:48:45,496 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:48:45,501 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+WARNING 2019-09-12 08:48:45,524 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-12 08:48:45,664 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:48:45,909 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 958
+INFO 2019-09-12 08:48:52,452 basehttp 124 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:48:52,459 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:49:14,916 basehttp 124 "GET /list/157/1/ HTTP/1.1" 200 100132
+INFO 2019-09-12 08:49:15,187 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:49:15,190 basehttp 124 "GET /hot/157/ HTTP/1.1" 200 483
+INFO 2019-09-12 08:49:17,210 basehttp 124 "GET /detail/1/ HTTP/1.1" 200 107134
+INFO 2019-09-12 08:49:17,586 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:49:17,604 basehttp 124 "GET /hot/157/ HTTP/1.1" 200 483
+INFO 2019-09-12 08:49:17,618 basehttp 124 "POST /detail/visit/157/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:49:17,619 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:49:17,624 basehttp 124 "GET /comment/1/ HTTP/1.1" 200 55
+INFO 2019-09-12 08:49:19,321 basehttp 124 "POST /carts/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:49:32,660 basehttp 124 "GET /carts/ HTTP/1.1" 200 4586
+INFO 2019-09-12 08:49:33,972 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 5573
+INFO 2019-09-12 08:49:36,664 basehttp 124 "POST /orders/commit/ HTTP/1.1" 200 68
+INFO 2019-09-12 08:49:36,714 basehttp 124 "GET /orders/success/?order_id=20190912084936000000001&payment_amount=11408&pay_method=2 HTTP/1.1" 200 3555
+INFO 2019-09-12 08:49:38,558 basehttp 124 "GET /payment/20190912084936000000001/ HTTP/1.1" 200 909
+INFO 2019-09-12 08:49:39,764 basehttp 124 "GET /payment/20190912084936000000001/ HTTP/1.1" 200 917
+WARNING 2019-09-12 08:49:53,006 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 08:49:53,021 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-12 08:49:53,025 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:49:53,059 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:49:53,184 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:49:53,237 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:49:53,346 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:49:53,418 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:49:53,708 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 958
+INFO 2019-09-12 08:50:20,719 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:50:20,735 basehttp 124 "POST /detail/visit/157/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:50:29,829 basehttp 124 "GET / HTTP/1.1" 200 124657
+INFO 2019-09-12 08:50:30,338 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:50:32,753 basehttp 124 "GET /login/ HTTP/1.1" 200 3605
+INFO 2019-09-12 08:50:47,793 basehttp 124 "POST /login/ HTTP/1.1" 302 0
+INFO 2019-09-12 08:50:49,094 basehttp 124 "GET / HTTP/1.1" 200 124657
+INFO 2019-09-12 08:50:49,819 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:50:56,068 basehttp 124 "GET /list/115/1/ HTTP/1.1" 200 102084
+INFO 2019-09-12 08:50:56,321 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:50:56,332 basehttp 124 "GET /hot/115/ HTTP/1.1" 200 588
+INFO 2019-09-12 08:50:58,439 basehttp 124 "GET /detail/6/ HTTP/1.1" 200 105603
+INFO 2019-09-12 08:50:58,837 basehttp 124 "GET /hot/115/ HTTP/1.1" 200 588
+INFO 2019-09-12 08:50:58,844 basehttp 124 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:50:58,880 basehttp 124 "GET /comment/6/ HTTP/1.1" 200 55
+INFO 2019-09-12 08:50:58,908 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:50:58,925 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:51:00,567 basehttp 124 "POST /carts/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:51:06,006 basehttp 124 "GET /carts/ HTTP/1.1" 200 4613
+INFO 2019-09-12 08:51:07,224 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 5269
+INFO 2019-09-12 08:51:13,607 basehttp 124 "GET /addresses/ HTTP/1.1" 200 8299
+INFO 2019-09-12 08:51:13,658 basehttp 124 "GET /static/js/user_center_site.js HTTP/1.1" 200 13616
+INFO 2019-09-12 08:51:13,663 basehttp 124 "GET /static/images/left_bg.jpg HTTP/1.1" 200 1367
+INFO 2019-09-12 08:51:13,666 basehttp 124 "GET /static/images/edit.png HTTP/1.1" 200 1244
+INFO 2019-09-12 08:51:13,809 basehttp 124 "GET /areas/ HTTP/1.1" 200 1774
+INFO 2019-09-12 08:51:20,305 basehttp 124 "GET /areas/?area_id=140000 HTTP/1.1" 200 603
+INFO 2019-09-12 08:51:21,810 basehttp 124 "GET /areas/?area_id=140400 HTTP/1.1" 200 677
+INFO 2019-09-12 08:51:40,670 basehttp 124 "POST /addresses/create/ HTTP/1.1" 200 331
+INFO 2019-09-12 08:51:43,686 basehttp 124 "PUT /addresses/2/default/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:51:47,943 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 5603
+INFO 2019-09-12 08:51:50,594 basehttp 124 "POST /orders/commit/ HTTP/1.1" 200 68
+INFO 2019-09-12 08:51:50,643 basehttp 124 "GET /orders/success/?order_id=20190912085150000000003&payment_amount=7998&pay_method=2 HTTP/1.1" 200 3554
+INFO 2019-09-12 08:51:55,797 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+WARNING 2019-09-12 08:51:55,857 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 08:51:55,866 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-12 08:51:55,912 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:51:55,982 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:51:56,082 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:51:56,142 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:51:56,166 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:51:56,514 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 958
+WARNING 2019-09-12 08:53:59,180 base 152 Not Found: /orders/settlement/register.html
+WARNING 2019-09-12 08:53:59,183 basehttp 124 "GET /orders/settlement/register.html HTTP/1.1" 404 8349
+INFO 2019-09-12 08:54:01,629 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:54:01,639 basehttp 124 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2019-09-12 08:54:05,174 basehttp 124 "GET /register/ HTTP/1.1" 200 4616
+INFO 2019-09-12 08:54:05,212 basehttp 124 "GET /static/js/register.js HTTP/1.1" 200 9786
+INFO 2019-09-12 08:54:05,228 basehttp 124 "GET /static/images/interval_line.png HTTP/1.1" 200 1123
+INFO 2019-09-12 08:54:05,233 basehttp 124 "GET /static/images/register_banner.png HTTP/1.1" 200 54894
+INFO 2019-09-12 08:54:05,343 basehttp 124 "GET /image_codes/d5b6ae2f-7c79-46c8-a173-980c8d632f72/ HTTP/1.1" 200 3167
+INFO 2019-09-12 08:55:00,444 basehttp 124 "GET /usernames/lixiaowei/count/ HTTP/1.1" 200 41
+INFO 2019-09-12 08:55:08,540 basehttp 124 "GET /mobiles/13641851625/count/ HTTP/1.1" 200 41
+INFO 2019-09-12 08:55:11,560 basehttp 124 "GET /image_codes/21b8f5aa-e80b-4eaa-943a-9d16a5d943be/ HTTP/1.1" 200 3236
+INFO 2019-09-12 08:55:19,689 basehttp 124 "GET /sms_codes/13641851625/?image_code=HQTN&image_code_id=21b8f5aa-e80b-4eaa-943a-9d16a5d943be HTTP/1.1" 200 29
+INFO 2019-09-12 08:55:19,701 basehttp 124 "GET /mobiles/13641851625/count/ HTTP/1.1" 200 41
+INFO 2019-09-12 08:55:30,266 basehttp 124 "GET /usernames/lixiaowei/count/ HTTP/1.1" 200 41
+INFO 2019-09-12 08:55:30,271 basehttp 124 "GET /mobiles/13641851625/count/ HTTP/1.1" 200 41
+INFO 2019-09-12 08:55:30,347 basehttp 124 "POST /register/ HTTP/1.1" 302 0
+INFO 2019-09-12 08:55:31,898 basehttp 124 "GET / HTTP/1.1" 200 124657
+INFO 2019-09-12 08:55:32,477 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-12 08:55:44,813 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:44,830 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+WARNING 2019-09-12 08:55:44,909 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 08:55:44,918 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-12 08:55:44,988 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:45,045 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:45,237 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 958
+INFO 2019-09-12 08:55:45,302 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:45,312 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+WARNING 2019-09-12 08:55:50,860 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 08:55:50,874 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-12 08:55:50,921 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:50,991 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:50,994 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:51,084 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:51,185 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:51,227 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:55:51,419 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 958
+INFO 2019-09-12 08:56:52,311 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:56:52,421 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+WARNING 2019-09-12 08:56:52,673 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 08:56:52,682 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-12 08:56:52,704 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:56:52,793 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:56:52,933 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:56:52,982 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:57:29,277 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 958
+WARNING 2019-09-12 08:58:04,832 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 08:58:04,925 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-12 08:58:05,044 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:58:05,087 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:58:05,103 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:58:05,193 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:58:05,248 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 08:58:05,332 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+ERROR 2019-09-12 08:58:05,562 exception 135 Internal Server Error: /meiduo_admin/statistical/month_increment/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/renderers.py", line 104, in render
+    allow_nan=not self.strict, separators=separators
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/utils/json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/utils/encoders.py", line 67, in default
+    return super().default(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'User' is not JSON serializable
+ERROR 2019-09-12 08:58:06,098 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 500 123398
+WARNING 2019-09-12 09:00:34,601 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-12 09:00:34,643 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-12 09:00:34,737 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 09:00:34,874 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-12 09:00:34,876 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 09:00:34,929 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-12 09:00:35,006 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-12 09:00:35,040 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-12 09:00:35,081 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+WARNING 2019-09-14 00:35:31,708 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-14 00:35:31,725 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+WARNING 2019-09-14 00:35:31,736 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 401 35
+WARNING 2019-09-14 00:35:31,748 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 401 35
+WARNING 2019-09-14 00:35:31,760 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 401 35
+WARNING 2019-09-14 00:35:31,769 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 401 35
+WARNING 2019-09-14 00:35:31,795 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 401 35
+WARNING 2019-09-14 00:35:31,830 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 401 35
+WARNING 2019-09-14 00:35:31,833 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 401 35
+INFO 2019-09-14 00:35:42,790 basehttp 124 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 0
+INFO 2019-09-14 00:35:42,908 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 209
+WARNING 2019-09-14 00:35:43,116 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2019-09-14 00:35:43,128 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-14 00:35:43,255 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:43,296 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:43,317 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:43,322 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:43,492 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:43,500 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:43,540 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+WARNING 2019-09-14 00:35:48,452 base 152 Not Found: /meiduo_admin/statistical/goods_day_views/
+INFO 2019-09-14 00:35:48,467 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:48,487 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+WARNING 2019-09-14 00:35:48,496 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9382
+INFO 2019-09-14 00:35:48,541 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:48,594 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:48,717 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:48,728 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 00:35:48,798 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:30:52,389 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2019-09-14 03:30:52,463 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2019-09-14 03:30:52,479 basehttp 124 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2019-09-14 03:30:52,480 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2019-09-14 03:30:52,481 basehttp 124 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+INFO 2019-09-14 03:30:52,405 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+INFO 2019-09-14 03:30:52,491 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2019-09-14 03:30:52,460 basehttp 124 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+INFO 2019-09-14 03:30:52,876 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:30:52,944 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:30:52,959 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:30:52,963 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+ERROR 2019-09-14 03:30:53,003 exception 135 Internal Server Error: /meiduo_admin/statistical/goods_day_views/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/views/statistical.py", line 108, in get
+    now_time = timezone.now().data()
+AttributeError: 'datetime.datetime' object has no attribute 'data'
+INFO 2019-09-14 03:30:53,154 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:30:53,156 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:30:53,329 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+ERROR 2019-09-14 03:30:53,429 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 500 20375
+INFO 2019-09-14 03:31:03,035 basehttp 124 "GET /list/115/1/ HTTP/1.1" 200 102084
+INFO 2019-09-14 03:31:03,112 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,121 basehttp 124 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,127 basehttp 124 "GET /static/css/jquery.pagination.css HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,137 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,140 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,151 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,160 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,164 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,220 basehttp 124 "GET /static/js/common.js HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,226 basehttp 124 "GET /static/js/list.js HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,239 basehttp 124 "GET /static/js/jquery.pagination.min.js HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,253 basehttp 124 "GET /static/images/shop_cart.png HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,257 basehttp 124 "GET /static/images/icons.png HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:03,467 basehttp 124 "GET /hot/115/ HTTP/1.1" 200 588
+INFO 2019-09-14 03:31:03,488 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-14 03:31:05,912 basehttp 124 "GET /detail/14/ HTTP/1.1" 200 105376
+INFO 2019-09-14 03:31:05,964 basehttp 124 "GET /static/images/goods/goods001.jpg HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:05,974 basehttp 124 "GET /static/images/goods/goods002.jpg HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:05,993 basehttp 124 "GET /static/js/detail.js HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:06,008 basehttp 124 "GET /static/images/selected.png HTTP/1.1" 304 0
+INFO 2019-09-14 03:31:06,286 basehttp 124 "GET /comment/14/ HTTP/1.1" 200 55
+INFO 2019-09-14 03:31:06,305 basehttp 124 "GET /hot/115/ HTTP/1.1" 200 588
+INFO 2019-09-14 03:31:06,319 basehttp 124 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2019-09-14 03:31:06,321 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-14 03:31:06,326 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-14 03:31:10,810 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:10,910 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:10,971 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+ERROR 2019-09-14 03:31:11,006 exception 135 Internal Server Error: /meiduo_admin/statistical/goods_day_views/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/views/statistical.py", line 108, in get
+    now_time = timezone.now().data()
+AttributeError: 'datetime.datetime' object has no attribute 'data'
+INFO 2019-09-14 03:31:11,036 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:11,145 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:11,187 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+ERROR 2019-09-14 03:31:11,359 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 500 20375
+INFO 2019-09-14 03:31:11,370 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:31:36,150 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:36,097 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:36,181 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+ERROR 2019-09-14 03:31:36,198 exception 135 Internal Server Error: /meiduo_admin/statistical/goods_day_views/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/views/statistical.py", line 109, in get
+    now_time = timezone.now().data()
+AttributeError: 'datetime.datetime' object has no attribute 'data'
+INFO 2019-09-14 03:31:36,329 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:36,339 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:36,410 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:31:36,432 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+ERROR 2019-09-14 03:31:36,613 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 500 20375
+ERROR 2019-09-14 03:31:47,135 exception 135 Internal Server Error: /meiduo_admin/statistical/goods_day_views/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/views/statistical.py", line 109, in get
+    now_time = timezone.now().data()
+AttributeError: 'datetime.datetime' object has no attribute 'data'
+INFO 2019-09-14 03:31:47,137 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:47,141 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:47,282 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:47,394 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:47,637 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:31:47,721 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+ERROR 2019-09-14 03:31:48,039 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 500 20375
+INFO 2019-09-14 03:31:48,085 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:32:27,941 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:32:27,969 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:32:27,945 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+ERROR 2019-09-14 03:32:28,033 exception 135 Internal Server Error: /meiduo_admin/statistical/goods_day_views/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/views/statistical.py", line 109, in get
+    now_time = timezone.now().data()
+AttributeError: 'datetime.datetime' object has no attribute 'data'
+INFO 2019-09-14 03:32:28,050 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:32:28,084 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:32:28,117 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+ERROR 2019-09-14 03:32:28,373 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 500 20375
+INFO 2019-09-14 03:32:28,405 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:33:42,903 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:33:42,961 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:33:42,968 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:33:42,988 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:33:43,051 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:33:43,217 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:33:43,317 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:33:50,945 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 28
+INFO 2019-09-14 03:34:39,260 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:34:39,329 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:34:39,333 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:34:39,519 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:34:39,599 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:34:39,711 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:34:39,784 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:34:41,554 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 33
+INFO 2019-09-14 03:35:37,446 basehttp 124 "GET /list/157/1/ HTTP/1.1" 200 100132
+INFO 2019-09-14 03:35:37,694 basehttp 124 "GET /hot/157/ HTTP/1.1" 200 483
+INFO 2019-09-14 03:35:37,704 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-14 03:35:41,294 basehttp 124 "GET /detail/1/ HTTP/1.1" 200 107134
+INFO 2019-09-14 03:35:41,656 basehttp 124 "POST /detail/visit/157/ HTTP/1.1" 200 29
+INFO 2019-09-14 03:35:41,722 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-14 03:35:41,724 basehttp 124 "GET /hot/157/ HTTP/1.1" 200 483
+INFO 2019-09-14 03:35:41,735 basehttp 124 "GET /comment/1/ HTTP/1.1" 200 55
+INFO 2019-09-14 03:35:41,741 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-14 03:35:44,890 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:35:44,906 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:35:45,020 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:35:45,021 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 68
+INFO 2019-09-14 03:35:45,065 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:35:45,220 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:35:45,321 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:35:45,374 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:35:56,228 basehttp 124 "GET /detail/2/ HTTP/1.1" 200 107137
+INFO 2019-09-14 03:35:56,531 basehttp 124 "GET /comment/2/ HTTP/1.1" 200 55
+INFO 2019-09-14 03:35:56,560 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-14 03:35:56,561 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-14 03:35:56,563 basehttp 124 "POST /detail/visit/157/ HTTP/1.1" 200 29
+INFO 2019-09-14 03:35:56,589 basehttp 124 "GET /hot/157/ HTTP/1.1" 200 483
+INFO 2019-09-14 03:36:02,252 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:36:02,270 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:36:02,351 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:36:02,381 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 68
+INFO 2019-09-14 03:36:02,422 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:36:02,473 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:36:02,562 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:36:02,653 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:40:10,719 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:40:10,765 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:40:10,782 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:40:10,881 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 68
+INFO 2019-09-14 03:40:10,944 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:40:10,984 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:40:11,050 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-14 03:40:11,052 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-14 03:40:48,165 basehttp 124 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+WARNING 2019-09-14 03:40:48,271 base 152 Not Found: /meiduo_admin/users/
+WARNING 2019-09-14 03:40:48,282 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 404 9543
+INFO 2019-09-14 03:52:42,431 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 268
+INFO 2019-09-14 03:54:19,869 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 268
+INFO 2019-09-14 03:55:02,819 basehttp 124 "OPTIONS /meiduo_admin/users/?page=2&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2019-09-14 03:55:06,946 basehttp 124 "GET /meiduo_admin/users/?page=2&pagesize=10&keyword= HTTP/1.1" 200 268
+INFO 2019-09-14 03:57:51,697 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 03:59:59,184 basehttp 124 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword=li HTTP/1.1" 200 0
+INFO 2019-09-14 03:59:59,255 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=li HTTP/1.1" 200 121
+INFO 2019-09-14 04:00:17,116 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 04:02:33,307 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 04:03:27,935 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 04:07:00,034 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 04:07:19,784 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+ERROR 2019-09-14 04:07:35,711 exception 135 Internal Server Error: /meiduo_admin/users/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/renderers.py", line 724, in render
+    template = loader.get_template(self.template)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2019-09-14 04:07:36,082 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=2&keyword= HTTP/1.1" 500 88495
+ERROR 2019-09-14 04:08:33,791 exception 135 Internal Server Error: /meiduo_admin/users/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/renderers.py", line 724, in render
+    template = loader.get_template(self.template)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2019-09-14 04:08:34,113 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=2&keyword= HTTP/1.1" 500 88630
+INFO 2019-09-14 04:08:47,978 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 04:08:56,982 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 04:09:12,113 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 04:10:31,699 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 04:12:20,763 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 322
+INFO 2019-09-14 04:15:46,208 basehttp 124 "OPTIONS /meiduo_admin/users/?page=1&pagesize=2&keyword= HTTP/1.1" 200 0
+INFO 2019-09-14 04:15:46,625 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=2&keyword= HTTP/1.1" 200 192
+INFO 2019-09-14 04:15:50,936 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=2&keyword= HTTP/1.1" 200 192
+INFO 2019-09-14 04:15:59,103 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=2&keyword= HTTP/1.1" 200 192
+INFO 2019-09-14 04:16:02,735 basehttp 124 "OPTIONS /meiduo_admin/users/?page=2&pagesize=2&keyword= HTTP/1.1" 200 0
+INFO 2019-09-14 04:16:02,794 basehttp 124 "GET /meiduo_admin/users/?page=2&pagesize=2&keyword= HTTP/1.1" 200 183
+INFO 2019-09-14 09:49:45,174 basehttp 124 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2019-09-14 09:49:45,178 basehttp 124 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+INFO 2019-09-14 09:49:45,188 basehttp 124 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2019-09-14 09:49:45,196 basehttp 124 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+INFO 2019-09-14 09:49:45,228 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-09-14 09:49:45,313 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 09:49:45,355 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 09:49:45,375 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 9718
+WARNING 2019-09-14 09:49:45,387 base 152 Not Found: /meiduo_admin/goods/channels/
+WARNING 2019-09-14 09:49:45,437 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 9709
+WARNING 2019-09-14 09:49:45,463 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 09:49:45,471 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 404 9726
+WARNING 2019-09-14 09:49:45,513 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 9718
+WARNING 2019-09-14 09:49:45,525 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 09:49:45,527 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 9709
+WARNING 2019-09-14 10:01:03,444 base 152 Not Found: /meiduo_admin/goods/channels/
+WARNING 2019-09-14 10:01:03,441 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:01:03,451 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:01:03,460 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 404 9726
+WARNING 2019-09-14 10:01:03,485 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 9709
+WARNING 2019-09-14 10:01:03,532 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 9718
+WARNING 2019-09-14 10:01:03,665 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:01:03,689 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:01:03,694 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 9718
+WARNING 2019-09-14 10:01:03,697 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 9709
+WARNING 2019-09-14 10:04:59,132 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:04:59,184 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:04:59,190 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+WARNING 2019-09-14 10:04:59,199 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+WARNING 2019-09-14 10:04:59,334 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:04:59,371 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:04:59,377 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+WARNING 2019-09-14 10:04:59,380 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+ERROR 2019-09-14 10:04:59,422 exception 135 Internal Server Error: /meiduo_admin/goods/channels/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 757, in data
+    ret = super().data
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 511, in to_representation
+    for field in fields:
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1022, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1099, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the ChannelSerializer serializer.",)
+ERROR 2019-09-14 10:04:59,854 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 500 22586
+WARNING 2019-09-14 10:05:08,645 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:05:08,650 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+ERROR 2019-09-14 10:05:08,653 exception 135 Internal Server Error: /meiduo_admin/goods/channels/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 757, in data
+    ret = super().data
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 675, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 511, in to_representation
+    for field in fields:
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1022, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 1099, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the ChannelSerializer serializer.",)
+WARNING 2019-09-14 10:05:08,737 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:05:08,767 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+WARNING 2019-09-14 10:05:08,891 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:05:08,943 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:05:08,947 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+WARNING 2019-09-14 10:05:08,951 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+ERROR 2019-09-14 10:05:09,374 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 500 22586
+WARNING 2019-09-14 10:05:58,654 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:05:58,640 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:05:58,669 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+WARNING 2019-09-14 10:05:58,676 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+WARNING 2019-09-14 10:05:58,773 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:05:58,785 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+INFO 2019-09-14 10:05:58,867 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 798
+WARNING 2019-09-14 10:05:59,004 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:05:59,013 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+INFO 2019-09-14 10:06:24,555 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/?page=2&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-09-14 10:06:24,610 basehttp 124 "GET /meiduo_admin/goods/channels/?page=2&pagesize=10 HTTP/1.1" 200 816
+INFO 2019-09-14 10:06:25,811 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/?page=3&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-09-14 10:06:25,866 basehttp 124 "GET /meiduo_admin/goods/channels/?page=3&pagesize=10 HTTP/1.1" 200 816
+INFO 2019-09-14 10:06:26,688 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/?page=4&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-09-14 10:06:26,743 basehttp 124 "GET /meiduo_admin/goods/channels/?page=4&pagesize=10 HTTP/1.1" 200 595
+INFO 2019-09-14 10:06:30,707 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 798
+WARNING 2019-09-14 10:07:09,713 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:07:09,765 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+WARNING 2019-09-14 10:07:09,716 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:07:09,881 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:07:09,898 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+WARNING 2019-09-14 10:07:09,912 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+WARNING 2019-09-14 10:07:10,033 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:07:10,041 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+INFO 2019-09-14 10:07:10,098 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 798
+WARNING 2019-09-14 10:08:48,796 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:08:48,857 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+WARNING 2019-09-14 10:08:48,840 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:08:48,956 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+WARNING 2019-09-14 10:08:48,975 base 152 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2019-09-14 10:08:49,033 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11015
+WARNING 2019-09-14 10:08:49,098 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:08:49,107 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11006
+INFO 2019-09-14 10:08:49,341 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+WARNING 2019-09-14 10:15:55,178 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:15:55,315 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+WARNING 2019-09-14 10:15:55,397 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:15:55,400 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:15:55,518 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 117
+INFO 2019-09-14 10:15:55,616 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 117
+INFO 2019-09-14 10:15:55,698 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-14 10:16:00,230 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 0
+INFO 2019-09-14 10:16:00,339 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:16:43,080 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:16:56,744 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/2/ HTTP/1.1" 200 0
+INFO 2019-09-14 10:16:56,854 basehttp 124 "GET /meiduo_admin/goods/channels/2/ HTTP/1.1" 200 122
+WARNING 2019-09-14 10:18:45,092 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:18:45,204 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:18:45,369 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-14 10:18:47,177 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:19:02,699 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:19:21,126 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:19:52,290 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:20:01,515 basehttp 124 "GET /meiduo_admin/goods/channels/2/ HTTP/1.1" 200 122
+WARNING 2019-09-14 10:20:34,992 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:20:35,046 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+WARNING 2019-09-14 10:20:35,642 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:20:35,692 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:20:36,037 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-14 10:21:01,418 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:21:01,422 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:21:05,059 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:21:12,717 basehttp 124 "GET /meiduo_admin/goods/channels/2/ HTTP/1.1" 200 122
+WARNING 2019-09-14 10:21:42,362 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:21:42,375 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+WARNING 2019-09-14 10:21:42,473 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:21:42,477 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:21:42,672 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:21:42,752 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-14 10:21:42,754 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:21:44,453 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+WARNING 2019-09-14 10:25:24,804 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:25:24,836 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+WARNING 2019-09-14 10:25:24,918 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:25:24,954 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:25:24,967 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:25:25,108 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:25:25,257 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-14 10:25:26,956 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+WARNING 2019-09-14 10:25:30,208 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:25:30,221 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+WARNING 2019-09-14 10:25:30,316 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:25:30,327 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:25:30,364 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:25:30,443 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:25:30,561 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+WARNING 2019-09-14 10:25:31,354 base 152 Not Found: /meiduo_admin/goods/categories/
+INFO 2019-09-14 10:25:31,468 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+WARNING 2019-09-14 10:25:31,492 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:25:31,570 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+WARNING 2019-09-14 10:25:31,613 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:25:31,618 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:25:31,746 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+WARNING 2019-09-14 10:25:32,036 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:25:32,086 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:25:32,126 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+WARNING 2019-09-14 10:25:32,208 base 152 Not Found: /meiduo_admin/goods/categories/
+WARNING 2019-09-14 10:25:32,216 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11189
+INFO 2019-09-14 10:25:32,292 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:25:32,422 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-14 10:25:33,864 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:27:18,383 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:28:14,627 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:28:14,749 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 10:28:14,962 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-14 10:28:15,464 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 200 16248
+INFO 2019-09-14 10:28:15,821 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 200 16248
+INFO 2019-09-14 10:28:17,571 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 10:29:43,395 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 11:07:19,497 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 11:08:10,106 basehttp 124 "GET /meiduo_admin/goods/channels/1/ HTTP/1.1" 200 122
+INFO 2019-09-14 11:14:33,934 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 11:14:34,071 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-14 11:14:34,355 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-14 11:14:34,549 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 200 16248
+INFO 2019-09-14 11:14:34,909 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 200 16248
+INFO 2019-09-14 11:16:39,877 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/ HTTP/1.1" 200 0
+ERROR 2019-09-14 11:16:39,938 exception 135 Internal Server Error: /meiduo_admin/goods/channels/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 430, in run_validation
+    value = self.to_internal_value(data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 489, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/serializers/channels.py", line 25, in validate_group_id
+    GoodsChannelGroup.objects.get(id=value, parent=None)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'parent' into field. Choices are: create_time, goodschannel, id, name, update_time
+ERROR 2019-09-14 11:16:40,148 basehttp 124 "POST /meiduo_admin/goods/channels/ HTTP/1.1" 500 22994
+ERROR 2019-09-14 11:16:41,358 exception 135 Internal Server Error: /meiduo_admin/goods/channels/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 430, in run_validation
+    value = self.to_internal_value(data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 489, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/serializers/channels.py", line 25, in validate_group_id
+    GoodsChannelGroup.objects.get(id=value, parent=None)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'parent' into field. Choices are: create_time, goodschannel, id, name, update_time
+ERROR 2019-09-14 11:16:41,507 basehttp 124 "POST /meiduo_admin/goods/channels/ HTTP/1.1" 500 22993
+ERROR 2019-09-14 11:17:34,409 exception 135 Internal Server Error: /meiduo_admin/goods/channels/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 430, in run_validation
+    value = self.to_internal_value(data)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/rest_framework/serializers.py", line 489, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/Users/dix/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/meiduo_admin/serializers/channels.py", line 25, in validate_group_id
+    GoodsChannelGroup.objects.get(id=value, parent=None)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 371, in get
+    clone = self.filter(*args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 784, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/query.py", line 802, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1250, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1276, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1154, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1034, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1352, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'parent' into field. Choices are: create_time, goodschannel, id, name, update_time
+ERROR 2019-09-14 11:17:34,984 basehttp 124 "POST /meiduo_admin/goods/channels/ HTTP/1.1" 500 22993
+INFO 2019-09-14 11:18:32,572 basehttp 124 "POST /meiduo_admin/goods/channels/ HTTP/1.1" 201 116
+INFO 2019-09-14 11:18:32,645 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/?pagesize=10 HTTP/1.1" 200 0
+INFO 2019-09-14 11:18:32,881 basehttp 124 "GET /meiduo_admin/goods/channels/?pagesize=10 HTTP/1.1" 200 1286
+INFO 2019-09-14 11:18:38,597 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/38/ HTTP/1.1" 200 0
+INFO 2019-09-14 11:18:38,689 basehttp 124 "GET /meiduo_admin/goods/channels/38/ HTTP/1.1" 200 116
+INFO 2019-09-14 11:18:43,061 basehttp 124 "PUT /meiduo_admin/goods/channels/38/ HTTP/1.1" 200 116
+INFO 2019-09-14 11:18:43,351 basehttp 124 "GET /meiduo_admin/goods/channels/?pagesize=10 HTTP/1.1" 200 1286
+INFO 2019-09-14 11:18:52,349 basehttp 124 "DELETE /meiduo_admin/goods/channels/38/ HTTP/1.1" 204 0
+INFO 2019-09-14 11:18:52,602 basehttp 124 "GET /meiduo_admin/goods/channels/?pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-14 11:37:49,811 basehttp 124 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2019-09-14 11:37:49,825 basehttp 124 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2019-09-14 11:37:49,870 basehttp 124 "OPTIONS /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-09-14 11:37:50,152 base 152 Not Found: /meiduo_admin/skus/simple/
+WARNING 2019-09-14 11:37:50,181 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 12619
+WARNING 2019-09-14 11:37:50,254 base 152 Not Found: /meiduo_admin/skus/simple/
+WARNING 2019-09-14 11:37:50,264 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 12619
+INFO 2019-09-14 11:37:50,433 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1838
+INFO 2019-09-14 11:40:34,685 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-14 11:40:34,825 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-14 11:40:34,907 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1838
+INFO 2019-09-14 12:25:34,258 basehttp 124 "OPTIONS /meiduo_admin/skus/images/ HTTP/1.1" 200 0
+INFO 2019-09-14 12:25:52,128 basehttp 124 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 137
+INFO 2019-09-14 12:25:52,203 basehttp 124 "OPTIONS /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 0
+INFO 2019-09-14 12:25:52,412 basehttp 124 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 2097
+INFO 2019-09-14 12:33:15,669 basehttp 124 "OPTIONS /meiduo_admin/skus/images/?page=2&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-09-14 12:33:15,829 basehttp 124 "GET /meiduo_admin/skus/images/?page=2&pagesize=10 HTTP/1.1" 200 2118
+INFO 2019-09-14 12:33:19,055 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2097
+INFO 2019-09-15 01:33:07,006 basehttp 124 "OPTIONS /meiduo_admin/skus/images/44/ HTTP/1.1" 200 0
+WARNING 2019-09-15 01:33:07,055 basehttp 124 "GET /meiduo_admin/skus/images/44/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:33:13,258 basehttp 124 "GET /meiduo_admin/skus/images/44/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:33:30,877 basehttp 124 "GET /meiduo_admin/skus/images/44/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:33:54,112 basehttp 124 "GET /meiduo_admin/skus/images/44/ HTTP/1.1" 401 35
+INFO 2019-09-15 01:34:08,912 basehttp 124 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:34:08,922 basehttp 124 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:34:08,938 basehttp 124 "OPTIONS /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-09-15 01:34:08,994 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:34:09,002 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2019-09-15 01:34:09,026 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:34:31,021 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:34:31,055 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:34:31,084 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2019-09-15 01:35:04,458 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2019-09-15 01:35:04,496 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:35:04,517 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:36:19,678 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:36:19,717 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2019-09-15 01:36:19,769 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:37:19,452 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:37:19,518 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2019-09-15 01:37:19,552 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+INFO 2019-09-15 01:37:21,829 basehttp 124 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:21,844 basehttp 124 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:21,864 basehttp 124 "OPTIONS /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-09-15 01:37:22,304 base 152 Not Found: /meiduo_admin/goods/simple/
+WARNING 2019-09-15 01:37:22,325 base 152 Not Found: /meiduo_admin/goods/specs/
+WARNING 2019-09-15 01:37:22,330 basehttp 124 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 12797
+WARNING 2019-09-15 01:37:22,339 basehttp 124 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 404 12817
+WARNING 2019-09-15 01:37:22,783 base 152 Not Found: /meiduo_admin/goods/simple/
+WARNING 2019-09-15 01:37:22,792 basehttp 124 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 12797
+INFO 2019-09-15 01:37:23,612 basehttp 124 "OPTIONS /meiduo_admin/users/?page=1&pagesize=2&keyword= HTTP/1.1" 200 0
+WARNING 2019-09-15 01:37:23,645 basehttp 124 "GET /meiduo_admin/users/?page=1&pagesize=2&keyword= HTTP/1.1" 401 35
+INFO 2019-09-15 01:37:40,118 basehttp 124 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 0
+WARNING 2019-09-15 01:37:40,253 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 400 49
+INFO 2019-09-15 01:37:47,629 basehttp 124 "POST /meiduo_admin/authorizations/ HTTP/1.1" 201 209
+INFO 2019-09-15 01:37:47,827 basehttp 124 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:47,854 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:47,868 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:47,885 basehttp 124 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:47,886 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:47,898 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:47,900 basehttp 124 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:47,959 basehttp 124 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:37:48,109 basehttp 124 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 48
+INFO 2019-09-15 01:37:48,131 basehttp 124 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 48
+INFO 2019-09-15 01:37:48,243 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+INFO 2019-09-15 01:37:48,264 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-15 01:37:48,571 basehttp 124 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 2
+INFO 2019-09-15 01:37:48,777 basehttp 124 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2019-09-15 01:37:48,856 basehttp 124 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 48
+INFO 2019-09-15 01:37:48,946 basehttp 124 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 48
+WARNING 2019-09-15 01:37:51,805 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:37:51,829 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+INFO 2019-09-15 01:37:52,424 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2097
+WARNING 2019-09-15 01:37:56,862 basehttp 124 "GET /meiduo_admin/skus/images/44/ HTTP/1.1" 401 35
+WARNING 2019-09-15 01:38:01,189 basehttp 124 "GET /meiduo_admin/skus/images/44/ HTTP/1.1" 401 35
+INFO 2019-09-15 01:38:21,007 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-15 01:38:21,383 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-15 01:38:21,585 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2097
+INFO 2019-09-15 01:38:32,850 basehttp 124 "GET /meiduo_admin/skus/images/44/ HTTP/1.1" 200 137
+INFO 2019-09-15 01:38:42,324 basehttp 124 "GET /meiduo_admin/skus/images/44/ HTTP/1.1" 200 137
+INFO 2019-09-15 01:38:47,307 basehttp 124 "OPTIONS /meiduo_admin/skus/images/43/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:38:47,554 basehttp 124 "GET /meiduo_admin/skus/images/43/ HTTP/1.1" 200 211
+INFO 2019-09-15 01:40:27,099 basehttp 124 "GET /meiduo_admin/skus/images/43/ HTTP/1.1" 200 211
+INFO 2019-09-15 01:43:22,986 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-15 01:43:23,399 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-15 01:43:23,447 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2097
+INFO 2019-09-15 01:43:27,996 basehttp 124 "GET /meiduo_admin/skus/images/44/ HTTP/1.1" 200 137
+INFO 2019-09-15 01:43:35,921 basehttp 124 "PUT /meiduo_admin/skus/images/44/ HTTP/1.1" 200 142
+INFO 2019-09-15 01:43:35,974 basehttp 124 "OPTIONS /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 0
+INFO 2019-09-15 01:43:36,557 basehttp 124 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 2102
+INFO 2019-09-15 01:43:39,116 basehttp 124 "GET /meiduo_admin/skus/images/43/ HTTP/1.1" 200 211
+INFO 2019-09-15 01:43:50,054 basehttp 124 "PUT /meiduo_admin/skus/images/43/ HTTP/1.1" 200 182
+INFO 2019-09-15 01:43:50,630 basehttp 124 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 2073
+INFO 2019-09-15 01:43:53,055 basehttp 124 "OPTIONS /meiduo_admin/skus/images/42/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:43:53,228 basehttp 124 "GET /meiduo_admin/skus/images/42/ HTTP/1.1" 200 211
+INFO 2019-09-15 01:44:01,898 basehttp 124 "PUT /meiduo_admin/skus/images/42/ HTTP/1.1" 200 177
+INFO 2019-09-15 01:44:02,506 basehttp 124 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 2039
+INFO 2019-09-15 01:44:04,949 basehttp 124 "OPTIONS /meiduo_admin/skus/images/41/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:44:05,134 basehttp 124 "GET /meiduo_admin/skus/images/41/ HTTP/1.1" 200 210
+INFO 2019-09-15 01:44:13,695 basehttp 124 "PUT /meiduo_admin/skus/images/41/ HTTP/1.1" 200 176
+INFO 2019-09-15 01:44:14,252 basehttp 124 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 2005
+INFO 2019-09-15 01:44:16,100 basehttp 124 "OPTIONS /meiduo_admin/skus/images/40/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:44:16,263 basehttp 124 "GET /meiduo_admin/skus/images/40/ HTTP/1.1" 200 210
+INFO 2019-09-15 01:44:23,460 basehttp 124 "PUT /meiduo_admin/skus/images/40/ HTTP/1.1" 200 176
+INFO 2019-09-15 01:44:24,051 basehttp 124 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1971
+INFO 2019-09-15 01:44:25,720 basehttp 124 "OPTIONS /meiduo_admin/skus/images/39/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:44:25,852 basehttp 124 "GET /meiduo_admin/skus/images/39/ HTTP/1.1" 200 211
+INFO 2019-09-15 01:44:36,357 basehttp 124 "GET /meiduo_admin/skus/images/39/ HTTP/1.1" 200 211
+INFO 2019-09-15 01:44:44,281 basehttp 124 "PUT /meiduo_admin/skus/images/39/ HTTP/1.1" 200 177
+INFO 2019-09-15 01:44:44,784 basehttp 124 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1937
+INFO 2019-09-15 01:44:45,928 basehttp 124 "OPTIONS /meiduo_admin/skus/images/38/ HTTP/1.1" 200 0
+INFO 2019-09-15 01:44:46,049 basehttp 124 "GET /meiduo_admin/skus/images/38/ HTTP/1.1" 200 211
+INFO 2019-09-15 01:44:53,284 basehttp 124 "PUT /meiduo_admin/skus/images/38/ HTTP/1.1" 200 182
+INFO 2019-09-15 01:44:53,880 basehttp 124 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1908
+INFO 2019-09-15 01:44:57,999 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-15 01:44:58,336 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-15 01:44:58,424 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1908
+ERROR 2019-09-15 01:45:18,852 exception 135 Internal Server Error: /detail/44/
+Traceback (most recent call last):
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/utils/deprecation.py", line 142, in __call__
+    response = self.process_response(request, response)
+  File "/Users/dix/workspaces/meiduo_mall/lib/python3.6/site-packages/django/middleware/clickjacking.py", line 32, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'Http404' object has no attribute 'get'
+ERROR 2019-09-15 01:45:19,681 basehttp 124 "GET /detail/44/ HTTP/1.1" 500 66265
+INFO 2019-09-15 01:45:23,835 basehttp 124 "POST /detail/visit/157/ HTTP/1.1" 200 29
+INFO 2019-09-15 01:45:23,841 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-15 01:45:38,740 basehttp 124 "GET /detail/14/ HTTP/1.1" 200 105379
+INFO 2019-09-15 01:45:38,823 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:38,836 basehttp 124 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:38,846 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:38,868 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:38,874 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:38,879 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:38,928 basehttp 124 "GET /static/images/goods/goods001.jpg HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:38,959 basehttp 124 "GET /static/js/common.js HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:38,986 basehttp 124 "GET /static/js/detail.js HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:39,013 basehttp 124 "GET /static/images/goods/goods002.jpg HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:39,017 basehttp 124 "GET /static/images/selected.png HTTP/1.1" 304 0
+INFO 2019-09-15 01:45:39,390 basehttp 124 "GET /comment/14/ HTTP/1.1" 200 55
+INFO 2019-09-15 01:45:39,441 basehttp 124 "GET /hot/115/ HTTP/1.1" 200 594
+INFO 2019-09-15 01:45:39,515 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-15 01:45:39,519 basehttp 124 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2019-09-15 01:45:39,531 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-15 01:46:20,261 basehttp 124 "GET /detail/14/ HTTP/1.1" 200 105379
+INFO 2019-09-15 01:46:20,776 basehttp 124 "GET /hot/115/ HTTP/1.1" 200 594
+INFO 2019-09-15 01:46:20,804 basehttp 124 "POST /browse_histories/ HTTP/1.1" 200 29
+INFO 2019-09-15 01:46:20,814 basehttp 124 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2019-09-15 01:46:20,873 basehttp 124 "GET /comment/14/ HTTP/1.1" 200 55
+INFO 2019-09-15 01:46:20,909 basehttp 124 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2019-09-16 00:13:38,936 basehttp 124 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:38,942 basehttp 124 "OPTIONS /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:38,963 basehttp 124 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:39,567 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-16 00:13:39,991 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-16 00:13:40,057 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1908
+INFO 2019-09-16 00:13:51,583 basehttp 124 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:51,584 basehttp 124 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:51,616 basehttp 124 "OPTIONS /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2019-09-16 00:13:52,003 base 152 Not Found: /meiduo_admin/goods/simple/
+WARNING 2019-09-16 00:13:52,052 base 152 Not Found: /meiduo_admin/goods/specs/
+WARNING 2019-09-16 00:13:52,055 basehttp 124 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 12797
+WARNING 2019-09-16 00:13:52,103 basehttp 124 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 404 12817
+WARNING 2019-09-16 00:13:52,270 base 152 Not Found: /meiduo_admin/goods/simple/
+WARNING 2019-09-16 00:13:52,274 basehttp 124 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 12797
+INFO 2019-09-16 00:13:55,491 basehttp 124 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:55,493 basehttp 124 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:55,495 basehttp 124 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:55,496 basehttp 124 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:55,511 basehttp 124 "OPTIONS /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2019-09-16 00:13:55,835 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-16 00:13:56,379 basehttp 124 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 344
+INFO 2019-09-16 00:13:56,869 basehttp 124 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 1294
+INFO 2019-09-16 00:13:57,201 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 200 16248
+INFO 2019-09-16 00:13:58,151 basehttp 124 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 200 16248
+INFO 2019-09-16 00:14:02,343 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-16 00:14:02,667 basehttp 124 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1466
+INFO 2019-09-16 00:14:02,754 basehttp 124 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1908

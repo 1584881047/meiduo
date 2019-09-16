@@ -37,7 +37,7 @@ export default {
       keyword:'',
       page:1,
       pages:8,
-      pagesize:10,
+      pagesize:2,
       aUserList:[]
     }
   },
